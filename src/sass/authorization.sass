@@ -1,0 +1,115 @@
+@import 'variables'
+@import 'main'
+
+#main-content
+    background-color: $darkGray
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__title
+        margin: 65px 0
+        color: $white
+        font-size: 24px
+        text-transform: uppercase
+        line-height: 1.2
+        text-align: center
+    &__forms
+        width: 83.3%
+        min-width: 975px
+        max-width: 1170px
+        display: flex
+        padding: 0 15px
+        box-sizing: border-box
+        justify-content: space-between
+    &__result
+        width: 83.3%
+        min-width: 975px
+        max-width: 1170px
+        display: flex
+        padding: 0 15px
+        box-sizing: border-box
+        flex-direction: column
+        align-items: center
+    
+#search-form, #authorization-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-width: 390px
+    box-sizing: border-box
+
+.subcategory-list
+    width: 100%
+    min-width: 390px
+    position: absolute
+    padding-left: 47px
+    top: 40px
+    right: 0
+    background-color: transparent
+    box-sizing: border-box
+    border-bottom-right-radius: 8px
+    border-bottom-left-radius: 8px
+
+.subcategory-item
+    cursor: pointer
+    background-color: $white
+    padding: 5px 10px
+    transition: 0.2s
+
+.subcategory-item:last-child
+    margin-bottom: 8px
+
+.subcategory-item:hover
+    color: $white
+    background-color: $lightBlue 
+
+.fargot
+    color: $white
+    margin-top: 10px
+
+.result-wrapper
+    box-sizing: border-box
+    background-color: $white
+    margin: 0 0 50px 0
+    padding: 10px
+    border-radius: 8px
+    width: 100%
+    height: 380px
+
+.result-list
+    box-sizing: border-box
+    background-color: $white
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin: 0
+    padding: 10px
+    width: 100%
+    height: 100%
+    overflow-y: scroll
+
+.result-item
+    width: 100%
+    border-radius: 8px
+    border: 1px solid rgb(102, 132, 150)
+    margin: 10px 0
+
+.result-row
+    font-size: 20px
+    margin: 10px
+    display: flex
+
+.cell
+    display: inline-block
+    text-align: justify
+
+.cell-header
+    width: 20%
+
+.cell-content
+    width: 80%
+
+@import 'loader'
+@import 'mediaAuth'

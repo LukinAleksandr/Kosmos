@@ -1,0 +1,91 @@
+.modal.open #modal-overlay,
+.modal.open #modal-window 
+    opacity: 1
+    z-index: 10
+
+.modal.hiding #modal-overlay,
+.modal.hiding #modal-window 
+    opacity: 1
+    z-index: 10
+
+.modal.open #modal-window
+    transform: translateY(100px)
+
+.modal.open #modal-overlay
+    background-color: rgba(0, 0, 0, 0.5)
+
+.modal.hiding #modal-window
+    transform: translateY(-300px)
+
+.modal.hiding #modal-overlay
+    background-color: rgba(0, 0, 0, 0)
+
+#modal-overlay, #modal-window
+    opacity: 0
+    z-index: -1
+
+#modal-overlay
+    font-family: 'Roboto', sans-serif
+    font-size: 1.2em
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: rgba(0, 0, 0, 0)
+    transition: background-color 0.2s ease-in
+
+#modal-window
+    position: relative
+    width: 90%
+    max-width: 700px
+    background-color: #fff
+    margin: 0 auto
+    display: flex
+    border-radius: 8px
+    padding: 10px
+    box-sizing: border-box
+    flex-direction: column
+    transform: translateY(-300px)
+    transition: transform 0.2s ease-in
+
+#modal-header
+    display: flex
+    justify-content: space-between
+    padding: 5px 0
+    #modal-title
+        user-select: none
+    #modal-close:hover
+        cursor: pointer
+        opacity: 0.8
+#modal-body
+    display: flex
+    flex-direction: column
+    padding: 5px 0
+    .error-message
+        margin: 0 0 5px 0
+        padding: 0
+    small
+        font-size: 0.6em
+    #modal-text
+        width: 100%
+        margin: 0
+        padding: 10px
+        box-sizing: border-box
+        resize: none
+        border-radius: 8px
+        outline: none
+        margin-bottom: 10px
+    #modal-file
+        border: none
+        padding: 0
+        border-radius: 0px
+        cursor: pointer
+
+#modal-footer
+    display: flex
+    justify-content: flex-end
+    .send
+        cursor: pointer
+
+

@@ -1,0 +1,57 @@
+@media screen and (max-width: 1170px) 
+    #wrapper
+        min-width: 992px
+    #main-content
+        &__title
+            font-size: 22px
+        &__forms
+            min-width: 826px
+        #password-form
+            min-width: 330px
+
+@media screen and (max-width: 992px) 
+    #wrapper
+        min-width: 768px
+    #main-content
+        &__title
+            font-size: 18px
+        &__forms
+            min-width: 670px
+            padding: 0
+        #password-form
+            min-width: 320px
+@media screen and (max-width: 768px) 
+    #wrapper
+        min-width: 576px
+    #main-content
+        &__title
+            min-width: 576px
+            font-size: 15px
+            padding: 0
+        &__forms
+            min-width: 390px
+            align-items: center
+            padding: 0
+        #password-form
+            width: 390px
+            margin-bottom: 20px
+    
+@media screen and (max-width: 576px) 
+    #wrapper
+        min-width: auto
+    #main-content
+        &__title
+            min-width: auto
+            width: 99%
+            font-size: 9px
+            margin: 25px 0
+            padding: 0
+        &__forms
+            min-width: auto
+            width: 99%
+            padding: 0
+            .password-block
+                width: 90%
+        #password-form
+            min-width: auto
+            width: 100%

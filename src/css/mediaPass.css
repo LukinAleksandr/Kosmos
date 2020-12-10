@@ -1,0 +1,78 @@
+@media screen and (max-width: 1170px) {
+  .wrapper {
+    min-width: 992px;
+  }
+  .main-content__title {
+    font-size: 22px;
+  }
+  .main-content__forms {
+    min-width: 826px;
+  }
+  .main-content .password-form {
+    min-width: 330px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    min-width: 768px;
+  }
+  .main-content__title {
+    font-size: 18px;
+  }
+  .main-content__forms {
+    min-width: 670px;
+    padding: 0;
+  }
+  .main-content .password-form {
+    min-width: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    min-width: 576px;
+  }
+  .main-content__title {
+    min-width: 576px;
+    font-size: 15px;
+    padding: 0;
+  }
+  .main-content__forms {
+    min-width: 390px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .main-content .password-form {
+    width: 390px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    min-width: auto;
+  }
+  .main-content__title {
+    min-width: auto;
+    width: 99%;
+    font-size: 9px;
+    margin: 25px 0;
+    padding: 0;
+  }
+  .main-content__forms {
+    min-width: auto;
+    width: 99%;
+    padding: 0;
+  }
+  .main-content__forms .password-block {
+    width: 90%;
+  }
+  .main-content .password-form {
+    min-width: auto;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=mediaPass.css.map */

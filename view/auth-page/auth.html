@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>"КОСМОС" - Авторизація</title>
+    <link rel="stylesheet" href="../../src/assets/fontawwesome/css/all.css">
+    <link rel="shortcut icon" href="../../src/assets/images/favicon_1.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <div class="header__logo">
+                <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+            </div>
+        </header>
+        <main id="main">
+            <div id="main-content">
+                <div id="main-content__title">
+                    <h3 class="light">Спільна платформа обміну інформацією щодо робіт по <br> заміщенню проблемного імпорту та освоєння <br> використання нових матеріалів і комплектуючих</h3>
+                </div>
+                <div id="main-content__forms">
+                    <div class="search-block">
+                        <form action="/" method="GET" id="search-form">
+                            <h3 class="forms-title">Пошук по базі імпортозаміщення</h3>
+                            <div class="input-block keyword-block">
+                                <span class="icon"><label for="search-keyword"><i class="fas fa-search"></i></label></span>
+                                <input type="text" name="keyword" id="search-keyword" class="category-input" placeholder="Пошук за ключовими словами" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                            </div>
+                            <div class="input-block subcategory-block">
+                                <span class="icon"><label for="search-subcategory"><i class="fas fa-sort-down search"></i></label></span>
+                                <input type="text" name="subcategory" class="subcategory-input search" id="search-subcategory" placeholder="Вибір напрямку" autocorrect="off" autocapitalize="off" autocomplete="off" value="Всі" minlength="3">
+                                <ul class="subcategory-list">
+                                </ul>
+                            </div>
+                            <input type="submit" class="primory-btn" value="Пошук">
+                            <p class='error-message center'></p>
+                        </form>
+                    </div>
+                    <div class="authorization-block">
+                        <form action="/" method="GET" id="authorization-form">
+                            <h3 class="forms-title">Авторизація</h3>
+                            <div class="input-block">
+                                <span class="icon"><label for="authorization-login"><i class="fas fa-user-circle"></i></label></span>
+                                <input type="email" name="email" id="authorization-login" placeholder="Логін">
+                            </div>
+                            <div class="input-block">
+                                <span class="icon"><label for="authorization-password"><i class="fas fa-lock"></i></label></span>
+                                <input type="password" name="password" id="authorization-password" placeholder="Пароль" autocomplete="on">
+                            </div>
+                            <input type="submit" class="primory-btn" value="Увійти">
+                            <p class='error-message center'></p>
+                        <a href="/password/page/" class="fargot">Забули пароль?</a>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div id="main-content__result">
+                    <h3 class="forms-title">Реультат пошуку</h3>
+                    <div class="result-wrapper">
+                        <ul class="result-list">
+                            <li class='result-item center'>Задайте критерії та виконайте пошук по базі.</li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </main>
+    </div>
+    <div class="loader">
+        <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+        <div class="lds-hourglass"></div>
+    </div>
+</body>
+</html>

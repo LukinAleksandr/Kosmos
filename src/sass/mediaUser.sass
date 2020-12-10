@@ -1,0 +1,105 @@
+@media screen and (max-width: 1170px) 
+    #wrapper
+        min-width: 992px
+    #aside
+        width: 300px
+    #main
+        .article
+            padding-left: 300px
+            .section_title
+                font-size: 15px
+            .result-row, .card-row 
+                font-size: 14px
+        #nav
+            padding-left: 300px
+            .nav_label
+                font-size: 16px
+@media screen and (max-width: 992px) 
+    #wrapper
+        min-width: 768px
+    #header
+        &_logo
+            display: block
+    #aside
+        position: relative
+        width: 100%
+        top: auto
+        bottom: auto
+        left: auto
+        height: auto
+        &_logo
+            display: none
+        #search-form
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-column-gap: 5px
+            .forms-title, .keyword-block, .company-block, .primory-btn, .error-message
+                grid-column: 1 / -1
+        #newpass-form
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-column-gap: 5px
+            .forms-title, .old_pass-block, .primory-btn, .error-message
+                grid-column: 1 / -1
+    #main
+        #nav
+            padding-left: 0px
+        .article 
+            padding-left: 5px
+            padding-right: 5px
+
+@media screen and (max-width: 768px) 
+    #wrapper
+        min-width: 576px
+    #header
+        .fa-user-circle
+            display: none
+    #main 
+        .result-row, .card-row 
+            font-size: 13px
+    
+@media screen and (max-width: 576px) 
+    #wrapper
+        min-width: auto
+    #header
+        &_wrapper 
+            padding: 10px 10px
+            justify-content: space-between
+        &_logo
+            display: none
+        &_user-info
+            margin-right: 0
+        #header_user-name 
+            font-size: 1em
+    #aside
+        padding: 5px
+        .forms-title
+            margin: 5px 0
+        .input-block
+            font-size: 11px
+        .company-item, .category-item, .subcategory-item 
+            text-overflow: ellipsis
+            overflow: hidden
+            white-space: nowrap
+    #main 
+        #nav 
+            .nav_label 
+                font-size: 11px
+        #section_profile
+            padding: 5px
+            .section_user-info
+                padding: 5px
+                font-size: 11px
+                .cell 
+                    text-overflow: ellipsis
+                    overflow: hidden
+                    white-space: nowrap
+                    padding: 0
+                .info-cell-header
+                    width: 25%
+        .result-row, .card-row
+            flex-direction: column
+        .card-row:last-child
+            flex-direction: row
+        .cell-header, .cell-content
+            width: 100%

@@ -1,0 +1,171 @@
+@import '~normalize.css'
+@import 'fonts'
+@import 'variables'
+body
+    overflow-x: hidden 
+
+body, html, p, ul, li
+    margin: 0
+    padding: 0
+    font-family: 'Roboto Regular'
+    color: $txt
+
+a, a:link, a:visited, a:hover, a:active 
+  text-decoration: none
+
+a:hover
+  color: $lightBlue !important
+
+.hide
+    display: none !important
+        
+ul, li
+    list-style: none
+
+.light
+    font-family: 'Roboto Light'
+
+.medium
+    font-family: 'Roboto Medium'
+
+.bold
+    font-family: 'Roboto Bold'
+
+.left
+    text-align: left
+.right
+    text-align: right
+.center
+    text-align: center
+.justify
+    text-align: justify
+
+#wrapper
+    box-sizing: border-box
+    min-width: 1170px
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    font-size: 14px
+
+#header
+    background-color: $lightBlue
+    display: flex
+    justify-content: center
+    align-items: center
+
+.forms-title
+    color: #fff
+    font-weight: 500
+
+#main
+    width: 100%
+    display: flex
+    flex-grow: 2
+
+.input-block
+    width: 100%
+    position: relative
+    margin: 6px 0
+.input-block:hover>.icon
+    background-color: #00a5f1
+
+input
+    border-radius: 8px
+    border: 1px solid rgb( 102, 132, 150 )
+    background-color: $white
+    width: 100%
+    height: 47px
+    box-sizing: border-box 
+    padding: 0 0 0 60px
+    outline: none
+
+input[type='checkbox']
+    cursor: pointer
+    width: auto
+    height: auto
+    margin-right: 10px
+    
+.edited
+    height: 100%
+    padding: 0 0 0 5px
+
+textarea
+    border: none
+    outline: none
+    resize: none
+    width: 100%
+    border: 1px solid rgb( 102, 132, 150 )
+    border-radius: 8px
+    margin: 0
+    padding: 15px
+    box-sizing: border-box
+    overflow: auto
+
+input[type='submit']
+    cursor: pointer
+    
+.icon
+    background-color: $lightBlue
+    position: absolute
+    border-radius: 8px 0 0 8px
+    left: 0
+    top: 0
+    width: 47px
+    height: 47px
+    color: #ffffff
+    display: flex
+    z-index: 1
+    justify-content: center
+    align-items: center
+    transition: background-color 0.2s
+    &__err
+        background-color: $red !important
+    i
+        font-size: 1.2em
+        cursor: pointer
+
+        
+.primory-btn
+    border-radius: 8px
+    background-color: $lightBlue
+    width: 100%
+    height: 47px
+    color: #fff
+    padding: 0
+    outline: none
+    border: none
+    margin: 6px 0
+    transition: 0.2s
+
+.primory-btn:hover
+    background-color: #00a5f1
+
+.primory-btn:active
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.6)
+
+.light-btn
+    border: 2px solid $white
+    color: $white
+    outline: none
+    cursor: pointer
+    border-radius: 8px
+    background-color: transparent
+    transition: 0.2s
+    width: 93px
+    height: 38px
+    
+.light-btn:active
+    border: 2px solid $darkGray
+
+.disabled
+    background-color: $gray !important
+
+.disabled:hover
+    background-color: $gray !important
+
+.error-message
+    color: $red
+    width: 100%
+
+

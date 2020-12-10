@@ -1,0 +1,120 @@
+@import 'variables'
+
+#admin-nav
+    width: 100%
+    box-sizing: border-box
+    display: grid
+    padding: 15px
+    grid-template-columns: repeat(4, 1fr)
+    grid-column-gap: 11px
+    .admin-nav_label
+        border: 2px solid rgb(0, 86, 136)
+        border-radius: 8px
+        background-color: rgba(0, 153, 241, .26)
+        width: 100%
+        height: 43px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 12.498px
+        color: #005688
+        cursor: pointer
+        transition: 0.2s
+    .admin-nav_radio:checked + .admin-nav_label
+        background-color: $white
+#admin-nav
+    .admin-nav_label:hover
+        background-color: rgba(0, 177, 241, .26)
+
+.creat-users-form, .creat-company-form
+    display: grid
+    max-width: 680px
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 30px
+    .user-name-block, .user-company-block, .user-position-block, .company-name-block, .company-site-block, .company-address-block, .company-email-block, .primory-btn
+        grid-column: 1 / -1
+.users-list-block, .companies-list-block, .categories-list-block
+    margin-top: 34px
+.table-wrapper
+    width: 100%
+#users-table, #companies-table, #categories-table
+    width: 100%
+    border: 1px solid rgb(102, 132, 150)
+    background-color: $white
+    box-sizing: border-box
+    border-radius: 8px
+    border-collapse: collapse
+    tr:nth-child(2n)
+        background-color: $lightGray
+    .table-cell
+        box-sizing: border-box
+        max-width: 180px
+        text-overflow: ellipsis
+        overflow: hidden 
+    td, th
+        padding: 5px 12px
+        text-align: center
+        min-height: 60px
+        border-right: 1px solid rgb(102, 132, 150)
+    input
+        padding: 0 5px
+    i
+        cursor: pointer
+    i:hover
+        color: $lightBlue
+
+.icon2
+    background-color: #0099f1
+    border-radius: 8px
+    width: 47px
+    margin: 6px 0
+    height: 47px
+    color: #ffffff
+    display: flex
+    z-index: 1
+    justify-content: center
+    align-items: center
+    cursor: pointer
+
+.creat-category-form
+    display: grid
+    max-width: 680px
+    grid-template-columns: 1fr 47px
+    grid-column-gap: 14px
+
+.primory-btn, .category-name-block
+        grid-column: 1 / -1
+
+.checking-post-wrapper
+    box-sizing: border-box
+    background-color: #fff
+    padding: 10px
+    border-radius: 8px
+    margin-top: 6px
+    width: 100%
+    flex-grow: 1
+
+.checking-post-list
+    box-sizing: border-box
+    background-color: #fff
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin: 0
+    padding: 10px
+    width: 100%
+    height: 100%
+    overflow-y: scroll
+
+.cheking-post-item
+    width: 100%
+    border-radius: 8px
+    border: 1px solid #668496
+    margin: 10px 0
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2)
+    i
+        cursor: pointer
+    i:hover
+        color: $lightBlue
+    
+@import 'mediaAdmin'

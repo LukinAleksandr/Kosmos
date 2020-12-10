@@ -1,0 +1,94 @@
+@media screen and (max-width: 1170px) 
+    #wrapper
+        min-width: 992px
+    #main-content
+        &__title
+            font-size: 22px
+        &__forms
+            min-width: 826px
+        &__result
+            min-width: 826px
+        #search-form, #authorization-form
+            min-width: 330px
+        .subcategory-list
+            min-width: 330px
+@media screen and (max-width: 992px) 
+    #wrapper
+        min-width: 768px
+    #main-content
+        &__title
+            font-size: 18px
+        &__forms
+            min-width: 670px
+            padding: 0
+        &__result
+            min-width: 670px
+            padding: 0
+        #search-form, #authorization-form
+            min-width: 320px
+        .subcategory-list
+            min-width: 320px
+    .cell
+        font-size: 17px
+@media screen and (max-width: 768px) 
+    #wrapper
+        min-width: 576px
+    #main-content
+        &__title
+            min-width: 576px
+            font-size: 15px
+            padding: 0
+        &__forms
+            min-width: 390px
+            flex-direction: column-reverse
+            justify-content: center
+            align-items: center
+            padding: 0
+        &__result
+            min-width: 390px
+            padding: 0
+        #search-form, #authorization-form
+            width: 390px
+            margin-bottom: 20px
+        .subcategory-list
+            width: 390px
+    .cell-header
+        width: 25%
+    .cell-content
+        width: 75%
+    .cell
+        font-size: 14px
+    
+@media screen and (max-width: 576px) 
+    #wrapper
+        min-width: auto
+    #main-content
+        &__title
+            min-width: auto
+            width: 99%
+            font-size: 9px
+            margin: 25px 0
+            padding: 0
+        &__forms
+            min-width: auto
+            width: 99%
+            flex-direction: column-reverse
+            justify-content: center
+            padding: 0
+            .search-block, .authorization-block
+                width: 90%
+        &__result
+            min-width: auto
+            width: 90%
+            padding: 0
+        #search-form, #authorization-form
+            min-width: auto
+            width: 100%
+        .subcategory-list
+            width: 100%
+    .result-row
+        flex-direction: column
+    .cell-header, .cell-content
+        width: 100%
+    .cell
+        font-size: 14px

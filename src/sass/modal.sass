@@ -1,0 +1,125 @@
+@import 'variables'
+
+.modal.open #modal-window
+    transform: scale(1)
+
+.modal.open #modal-overlay
+    background-color: rgba(0, 0, 0, 0.5)
+
+.modal.close #modal-window
+    transform: scale(0)
+
+.modal.close #modal-overlay
+    background-color: rgba(0, 0, 0, 0)
+
+#modal-overlay
+    font-family: 'Roboto', sans-serif
+    font-size: 1.2em
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 100
+    background-color: rgba(0, 0, 0, 0)
+    transition: background-color 0.2s ease-in
+
+#modal-window
+    position: relative
+    width: 90%
+    max-width: 400px
+    background-color: $white
+    display: flex
+    border-radius: 8px
+    padding: 5px
+    box-sizing: border-box
+    flex-direction: column
+    transform: scale(0)
+    z-index: 1000
+    transition: transform 0.2s ease-in
+
+#modal-header
+    display: flex
+    justify-content: flex-end
+    padding: 5px 0
+
+#modal-close
+    display: flex
+    margin: 0
+    padding: 0
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    cursor: pointer
+    line-height: 24px
+    transition: 0.2s
+    height: 24px
+    width: 24px
+    background-color: $lightBlue
+    color: $white
+
+#modal-close:hover
+    background-color: #00a5f1
+
+#modal-title
+    user-select: none
+
+#modal-body 
+    padding: 5px 0
+    margin: 10px
+    text-align: center
+    letter-spacing: 0.025em
+    line-height: 2rem
+    font-family: Raleway, Open Sans, Arial
+    font-weight: 300
+    font-size: 0.85em
+
+#modal-message
+    letter-spacing: 0
+    font-size: 0.8em
+    font-weight: 100
+    line-height: 1.3em
+    margin-bottom: 15px
+    color: $darkGray
+
+.modal-btn
+    display: inline-block
+    padding: 0.25em 1em
+    box-sizing: border-box
+    width: 150px
+    background: $white
+    color: $gray
+    text-decoration: none
+    letter-spacing: 0.075em
+    line-height: 2rem
+    font-family: Raleway, Open Sans, Arial
+    font-weight: 300
+    font-size: 0.85em
+    border-radius: 4px
+    border: 1px solid $lightGray
+    
+    transition: .1s all
+    cursor: pointer
+
+.modal-btn:hover 
+    color: #a0a0a0
+    background: #f8f8f8
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05)
+    transform: scale(1.01)
+
+.modal-btn.success
+    border-color: #6199B7
+    color: #6199B7
+
+.modal-btn.success:hover
+    border-color: $lightBlue
+    color: $white
+    background-color: $lightBlue
+
+#modal-footer
+    display: flex
+    justify-content: space-around
+    margin-bottom: 10px

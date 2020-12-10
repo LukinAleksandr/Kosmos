@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>"КОСМОС" - База</title>
+    <link rel="stylesheet" href="../../src/assets/fontawwesome/css/all.css">
+    <link rel="shortcut icon" href="../../src/assets/images/favicon_1.ico" type="image/x-icon">
+<body>        
+    <div id="wrapper">        
+        <header id="header">
+            <div id="header_wrapper">
+                <div id="header_logo">
+                    <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+                </div>
+                <div id="header_user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <h2 id="header_user-name" class="light">Лукін Олександр</h2>
+                </div>
+                <div id="header_exit">
+                    <button class="destroy light-btn">Вихід</button>
+                </div>
+            </div>
+        </header>
+        <aside id="aside">
+            <div id="aside_logo">
+                <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+            </div>
+            <div id="aside_forms">
+                <form action="/" method="GET" id="search-form">
+                    <h3 class="forms-title">Пошук по базі</h3>
+                    <div class="input-block keyword-block">
+                        <span class="icon"><label for="search-keyword"><i class="fas fa-search"></i></label></span>
+                        <input type="text" name="keyword" id="search-keyword" class="search-inp keyword-input" placeholder="Пошук за ключовими словами" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                    </div>
+                    <div class="input-block company-block">
+                        <span class="icon"><label for="search-company"><i class="fas fa-sort-down search"></i></label></span>
+                        <input type="text" name="company" id="search-company" class="search-inp company-input search" placeholder="Підприємства" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3" value="Всі">
+                        <ul class="company-list">
+                        </ul>
+                    </div>
+                    <div class="input-block category-block">
+                        <span class="icon"><label for="search-category"><i class="fas fa-sort-down search"></i></label></span>
+                        <input type="text" name="category" id="search-category" class="search-inp category-input search" placeholder="Категорія" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3" value="Всі">
+                        <ul class="category-list">
+                        </ul>
+                    </div>
+                    <div class="input-block subcategory-block">
+                        <span class="icon"><label for="search-subcategory"><i class="fas fa-sort-down search"></i></label></span>
+                        <input type="text" name="subcategory" id="search-subcategory" class="search-inp subcategory-input search" placeholder="Підкатегорія" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3" value="Всі">
+                        <ul class="subcategory-list">
+                        </ul>
+                    </div>
+                    <input type="submit" class="primory-btn" value="Пошук">
+                    <p class="error-message center"></p>
+                </form>
+                <form action="/" method="GET" id="newpass-form" class="hide">
+                    <h3 class="forms-title">Змінити пароль</h3>
+                    <div class="input-block old_pass-block">
+                        <span class="icon"><label for="oldpass"><i class="fas fa-user-lock"></i></label></span>
+                        <input type="password" name="password" id="oldpass" class="password-inp" placeholder="Старий пароль" autocomplete="on">
+                    </div>
+                    <div class="input-block new_pass-block">
+                        <span class="icon"><label for="newpass"><i class="fas fa-lock"></i></label></span>
+                        <input type="password" name="password" id="newpass" class="password-inp" placeholder="Новий пароль" autocomplete="on">
+                    </div>
+                    <div class="input-block new_pass_rep-block">
+                        <span class="icon"><label for="newpass-repeat"><i class="fas fa-lock"></i></label></span>
+                        <input type="password" name="password" id="newpass-repeat" class="password-inp" placeholder="Новий пароль" autocomplete="on">
+                    </div>
+                    <input type="submit" class="primory-btn" value="Змінити">
+                    <p class="error-message center"></p>
+                </form>
+            </div>
+            <div id="aside_helper">
+                <a href="mailto:helper@a-kosmos.com.ua">helper@a-kosmos.com.ua</a>
+            </div>
+        </aside>
+        <main id="main">
+            <nav id="nav">
+                <input type="radio" name="head-menu" id="nav_search" class="nav_radio hide" value="search" checked>
+                <label for="nav_search" class="nav_label">Пошук</label>
+                <input type="radio" name="head-menu" id="nav_profile" class="nav_radio hide" value="profile">
+                <label for="nav_profile" class="nav_label">Персональні дані</label>
+            </nav>
+            <article class="article search" id="article-search">
+                <section class="section" id="section_search-result">
+                    <span class="section_title bold">Результат пошуку</span>
+                    <div class="result-wrapper">
+                        <ul class="result-list">
+                            <li class="result-item center">Задайте критерії та виконайте пошук по базі.</li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+            <article class="article profile hide" id="article-profile">
+                <section class="section" id="section_profile">
+                    <span class="section_title bold">Персональні данні</span>
+                    <div class="section_user-info">
+                        <div class="info-row info-company">
+                            <span class="cell info-cell-header bold">Організація:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-button"></span>
+                        </div>
+                        <div class="info-row info-position">
+                            <span class="cell info-cell-header bold">Посада:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-input hide">
+                                <input type="text" class="position-inp edited" placeholder="Менеджер" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                            </span>
+                            <span class="cell info-cell-button"><i class="fas fa-edit"></i></i></span>
+                        </div>
+                        <div class="info-row info-name">
+                            <span class="cell info-cell-header bold">П.І.П:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-input hide">
+                                <input type="text" class="name-inp edited" placeholder="Прізвище Ім'я по Батькові" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                            </span>
+                            <span class="cell info-cell-button"><i class="fas fa-edit"></i></i></span>
+                        </div>
+                        <div class="info-row info-phone">
+                            <span class="cell info-cell-header bold">Телефон:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-input hide">
+                                <input type="text" class="phone-inp phone edited" placeholder="(999) 999-99-99" autocorrect="off" autocapitalize="off" autocomplete="off"">
+                            </span>
+                            <span class="cell info-cell-button"><i class="fas fa-edit"></i></i></span>
+                        </div>
+                        <div class="info-row info-adress">
+                            <span class="cell info-cell-header bold">Адреса:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-button"></span>
+                        </div>
+                        <div class="info-row info-email">
+                            <span class="cell info-cell-header bold">E-mail:</span>
+                            <span class="cell info-cell-content"><a href="mailto:#">#</a></span>
+                            <span class="cell info-cell-button"></span>
+                        </div>
+                    </div>                    
+                </section>
+                <section class="section" id="section_card-form">
+                    <span class="section_title bold">Створити запис</span>
+                    <form action="/" method="GET" class="creat-card-form">
+                        <div class="input-block category-block">
+                            <span class="icon"><label for="card-category"><i class="fas fa-sort-down"></i></label></span>
+                            <input type="text" name="category" id="card-category" class="category-input" placeholder="Виберіть категорію" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            <ul class="category-list">
+                            </ul>
+                        </div>
+                        <div class="input-block subcategory-block">
+                            <span class="icon"><label for="card-subcategory"><i class="fas fa-sort-down"></i></label></span>
+                            <input type="text" name="subcategory" id="card-subcategory" class="subcategory-input" placeholder="Виберіть підкатегорію" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            <ul class="subcategory-list">
+                            </ul>
+                        </div>
+                        <div class="input-block note-block">
+                            <textarea name="textarea" id="card-note" rows="5" maxlength="3000" minlength="20"></textarea>
+                        </div>
+                        <div class="input-block agreement-block">
+                            <input type="checkbox" name="agreement" id="agreement">
+                            <label for="agreement">Запис відповідає вимогам розділу <a download href="../../src/pdf/Інструкція Користувача.pdf">5.2.2.1 Керівництва користувача</a></label>
+                        </div>
+                        <input type="submit" class="primory-btn" value="Додати">
+                        <p class="error-message center"></p>
+                    </form>
+                </section>
+                <section class="section" id="section_cards-list">
+                    <span class="section_title bold">Мої записи</span>
+                    <div class="cards-wrapper">
+                        <ul class="cards-list">
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+    <div class="loader">
+        <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+        <div class="lds-hourglass"></div>
+    </div>
+</html>

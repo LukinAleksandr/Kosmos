@@ -1,0 +1,6 @@
+AddDefaultCharset utf-8
+RewriteEngine on
+RewriteBase /
+#Если файл на сервере существует - то не использовать перезаписываемое правило
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php

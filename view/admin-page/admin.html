@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>"КОСМОС" - База</title>
+    <link rel="stylesheet" href="../../src/assets/fontawwesome/css/all.css">
+    <link rel="shortcut icon" href="../../src/assets/images/favicon_1.ico" type="image/x-icon">
+<body>        
+    <div id="wrapper">        
+        <header id="header">
+            <div id="header_wrapper">
+                <div id="header_logo">
+                    <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+                </div>
+                <div id="header_user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <h2 id="header_user-name" class="light">Лукін Олександр</h2>
+                </div>
+                <div id="header_exit">
+                    <button class="destroy light-btn">Вихід</button>
+                </div>
+            </div>
+        </header>
+        <aside id="aside">
+            <div id="aside_logo">
+                <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+            </div>
+            <div id="aside_forms">
+                <form action="/" method="GET" id="search-form">
+                    <h3 class="forms-title">Пошук по базі</h3>
+                    <div class="input-block keyword-block">
+                        <span class="icon"><label for="search-keyword"><i class="fas fa-search"></i></label></span>
+                        <input type="text" name="keyword" id="search-keyword" class="search-inp keyword-input" placeholder="Пошук за ключовими словами" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                    </div>
+                    <div class="input-block company-block">
+                        <span class="icon"><label for="search-company"><i class="fas fa-sort-down search"></i></label></span>
+                        <input type="text" name="company" id="search-company" class="search-inp company-input search" placeholder="Підприємства" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3" value="Всі">
+                        <ul class="company-list">
+                        </ul>
+                    </div>
+                    <div class="input-block category-block">
+                        <span class="icon"><label for="search-category"><i class="fas fa-sort-down search"></i></label></span>
+                        <input type="text" name="category" id="search-category" class="search-inp category-input search" placeholder="Категорія" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3" value="Всі">
+                        <ul class="category-list">
+                        </ul>
+                    </div>
+                    <div class="input-block subcategory-block">
+                        <span class="icon"><label for="search-subcategory"><i class="fas fa-sort-down search"></i></label></span>
+                        <input type="text" name="subcategory" id="search-subcategory" class="search-inp subcategory-input search" placeholder="Підкатегорія" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3" value="Всі">
+                        <ul class="subcategory-list">
+                        </ul>
+                    </div>
+                    <input type="submit" class="primory-btn" value="Пошук">
+                    <p class="error-message center"></p>
+                </form>
+                <form action="/" method="GET" id="newpass-form" class="hide">
+                    <h3 class="forms-title">Змінити пароль</h3>
+                    <div class="input-block old_pass-block">
+                        <span class="icon"><label for="oldpass"><i class="fas fa-user-lock"></i></label></span>
+                        <input type="password" name="password" id="oldpass" class="password-inp" placeholder="Старий пароль" autocomplete="on">
+                    </div>
+                    <div class="input-block new_pass-block">
+                        <span class="icon"><label for="newpass"><i class="fas fa-lock"></i></label></span>
+                        <input type="password" name="password" id="newpass" class="password-inp" placeholder="Новий пароль" autocomplete="on">
+                    </div>
+                    <div class="input-block new_pass_rep-block">
+                        <span class="icon"><label for="newpass-repeat"><i class="fas fa-lock"></i></label></span>
+                        <input type="password" name="password" id="newpass-repeat" class="password-inp" placeholder="Новий пароль" autocomplete="on">
+                    </div>
+                    <input type="submit" class="primory-btn" value="Змінити">
+                    <p class="error-message center"></p>
+                </form>
+            </div>
+            
+        </aside>
+        <main id="main">
+            <nav id="nav">
+                <input type="radio" name="head-menu" id="nav_search" class="nav_radio hide" value="search" checked>
+                <label for="nav_search" class="nav_label">Пошук</label>
+                <input type="radio" name="head-menu" id="nav_profile" class="nav_radio hide" value="profile">
+                <label for="nav_profile" class="nav_label">Персональні дані</label>
+                <input type="radio" name="head-menu" id="nav_admin"  class="nav_radio hide" value="admin">
+                <label for="nav_admin" class="nav_label">Панель адміністратора</label>
+            </nav>
+            <article class="article search" id="article-search">
+                <section class="section" id="section_search-result">
+                    <span class="section_title bold">Результат пошуку</span>
+                    <div class="result-wrapper">
+                        <ul class="result-list">
+                            <li class="result-item center">Задайте критерії та виконайте пошук по базі.</li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+            <article class="article profile hide" id="article-profile">
+                <section class="section" id="section_profile">
+                    <span class="section_title bold">Персональні данні</span>
+                    <div class="section_user-info">
+                        <div class="info-row info-company">
+                            <span class="cell info-cell-header bold">Організація:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-button"></span>
+                        </div>
+                        <div class="info-row info-position">
+                            <span class="cell info-cell-header bold">Посада:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-input hide">
+                                <input type="text" class="position-inp edited" placeholder="Менеджер" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                            </span>
+                            <span class="cell info-cell-button"><i class="fas fa-edit"></i></i></span>
+                        </div>
+                        <div class="info-row info-name">
+                            <span class="cell info-cell-header bold">П.І.П:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-input hide">
+                                <input type="text" class="name-inp edited" placeholder="Прізвище Ім'я по Батькові" autocorrect="off" autocapitalize="off" autocomplete="off" maxlength="100">
+                            </span>
+                            <span class="cell info-cell-button"><i class="fas fa-edit"></i></i></span>
+                        </div>
+                        <div class="info-row info-phone">
+                            <span class="cell info-cell-header bold">Телефон:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-input hide">
+                                <input type="text" class="phone-inp phone edited" placeholder="(999) 999-99-99" autocorrect="off" autocapitalize="off" autocomplete="off"">
+                            </span>
+                            <span class="cell info-cell-button"><i class="fas fa-edit"></i></i></span>
+                        </div>
+                        <div class="info-row info-adress">
+                            <span class="cell info-cell-header bold">Адреса:</span>
+                            <span class="cell info-cell-content"></span>
+                            <span class="cell info-cell-button"></span>
+                        </div>
+                        <div class="info-row info-email">
+                            <span class="cell info-cell-header bold">E-mail:</span>
+                            <span class="cell info-cell-content"><a href="mailto:#">#</a></span>
+                            <span class="cell info-cell-button"></span>
+                        </div>
+                    </div>                    
+                </section>
+                <section class="section" id="section_card-form">
+                    <span class="section_title bold">Створити запис</span>
+                    <form action="/" method="GET" class="creat-card-form">
+                        <div class="input-block category-block">
+                            <span class="icon"><label for="card-category"><i class="fas fa-sort-down"></i></label></span>
+                            <input type="text" name="category" id="card-category" class="category-input" placeholder="Виберіть категорію" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            <ul class="category-list">
+                            </ul>
+                        </div>
+                        <div class="input-block subcategory-block">
+                            <span class="icon"><label for="card-subcategory"><i class="fas fa-sort-down"></i></label></span>
+                            <input type="text" name="subcategory" id="card-subcategory" class="subcategory-input" placeholder="Виберіть підкатегорію" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            <ul class="subcategory-list">
+                            </ul>
+                        </div>
+                        <div class="input-block note-block">
+                            <textarea name="textarea" id="card-note" rows="5" maxlength="3000" minlength="20"></textarea>
+                        </div>
+                        <div class="input-block agreement-block">
+                            <input type="checkbox" name="agreement" id="agreement">
+                            <label for="agreement">Запис відповідає вимогам розділу <a download href="../../src/pdf/Інструкція Користувача.pdf">5.2.2.1 Керівництва користувача</a></label>
+                        </div>
+                        <input type="submit" class="primory-btn" value="Додати">
+                        <p class="error-message center"></p>
+                    </form>
+                </section>
+                <section class="section" id="section_cards-list">
+                    <span class="section_title bold">Мої записи</span>
+                    <div class="cards-wrapper">
+                        <ul class="cards-list">
+                        </ul>
+                    </div>
+                </section>
+            </article>
+            <article class="article admin hide" id="article-admin">
+                <nav id="admin-nav">
+                        <input type="radio" name="admin-menu" id="admin-nav_users"      class="admin-nav_radio hide" value="users" checked>
+                        <label for="admin-nav_users"        class="admin-nav_label">Користувачі</label>
+                        <input type="radio" name="admin-menu" id="admin-nav_companies"  class="admin-nav_radio hide" value="companies">
+                        <label for="admin-nav_companies"    class="admin-nav_label">Підприємства</label>
+                        <input type="radio" name="admin-menu" id="admin-nav_categories" class="admin-nav_radio hide" value="categories">
+                        <label for="admin-nav_categories"   class="admin-nav_label">Категорії</label>
+                        <input type="radio" name="admin-menu" id="admin-nav_notes"      class="admin-nav_radio hide" value="notes">
+                        <label for="admin-nav_notes"        class="admin-nav_label">Записи</label>
+                </nav>
+                <section class="section users" id="section_users">
+                    <div class="creat-user-block">
+                        <span class="section_title bold">Анкета користувача</span>
+                        <form action="/" method="GET" class="creat-users-form">
+                            <div class="input-block user-name-block">
+                                <span class="icon"><label for="creat-user-name"><i class="fas fa-user-circle"></i></label></span>
+                                <input type="text" name="name" id="creat-user-name" class="user-name-input" placeholder="П.І.П" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="input-block user-company-block">
+                                <span class="icon"><label for="creat-user-company"><i class="fas fa-city"></i></label></span>
+                                <input type="text" name="company" id="creat-user-company" class="user-company-input company-input" placeholder="Підприємство" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                                <ul class="company-list">
+                                </ul>
+                            </div>
+                            <div class="input-block user-position-block">
+                                <span class="icon"><label for="creat-user-position"><i class="fas fa-id-card"></i></label></span>
+                                <input type="text" name="position" id="creat-user-position" class="user-position-input" placeholder="Посада" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            </div>
+                            <div class="input-block user-phone-block">
+                                <span class="icon"><label for="creat-user-phone"><i class="fas fa-phone-alt"></i></label></span>
+                                <input type="phone" name="phone" id="creat-user-phone" class="user-phone-input phone" placeholder="Телефон" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="input-block user-email-block">
+                                <span class="icon"><label for="creat-user-email"><i class="fas fa-envelope"></i></label></span>
+                                <input type="email" name="email" id="creat-user-email" class="user-email-input" placeholder="Пошта" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="input-block user-role-block">
+                                <span class="icon"><label for="creat-user-role"><i class="fas fa-user-edit"></i></label></span>
+                                <input type="text" name="role" id="creat-user-role" class="user-role-input" placeholder="Роль" autocorrect="off" autocapitalize="off" autocomplete="off">
+                                <ul class="user-role-list">
+                                </ul>
+                            </div>
+                            <div class="input-block user-status-block">
+                                <span class="icon"><label for="creat-user-status"><i class="fas fa-layer-group"></i></label></span>
+                                <input type="number" name="status" id="creat-user-status" class="user-status-input" placeholder="Статус" autocorrect="off" autocapitalize="off" autocomplete="off" value="1" max="3" min="1">
+                            </div>
+                            <input type="submit" class="primory-btn" value="Створити">
+                            <p class="error-message center"></p>
+                        </form>
+                    </div>
+                    <div class="users-list-block">
+                        <span class="section_title bold">Список користувачів</span>
+                        <div class="table-wrapper">
+                            <table id='users-table'>
+                                <tr class="table-row-header">
+                                    <th class="table-header">id</th>
+                                    <th class="table-header">Пошта</th>
+                                    <th class="table-header">П.І.П</th>
+                                    <th class="table-header">Підприємство</th>
+                                    <th class="table-header">Телефон</th>
+                                    <th class="table-header">Посада</th>
+                                    <th class="table-header">Роль</th>
+                                    <th class="table-header">Статус</th>
+                                    <th class="table-header"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <section class="section companies hide" id="section_companies">
+                    <div class="creat-company-block">
+                        <span class="section_title bold">Анкета підприємства</span>
+                        <form action="/" method="get" class="creat-company-form">
+                            <div class="input-block company-name-block">
+                                <span class="icon"><label for="creat-company-name"><i class="fas fa-city"></i></label></span>
+                                <input type="text" name="company" id="creat-company-name" class="company-name-input" placeholder="Повна назва" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="input-block company-address-block">
+                                <span class="icon"><label for="creat-company-address"><i class="fas fa-map-marker-alt"></i></label></span>
+                                <input type="text" name="adress" id="creat-company-address" class="company-address-input" placeholder="Адреса" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            </div>
+                            <div class="input-block company-site-block">
+                                <span class="icon"><label for="creat-company-site"><i class="fas fa-globe"></i></label></span>
+                                <input type="text" name="site" id="creat-company-site" class="company-site-input" placeholder="Сайт" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            </div>
+                            <div class="input-block company-email-block">
+                                <span class="icon"><label for="creat-company-email"><i class="fas fa-envelope"></i></label></span>
+                                <input type="email" name="email" id="creat-company-email" class="company-email-input" placeholder="Пошта" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="input-block company-phone-block">
+                                <span class="icon"><label for="creat-company-phone"><i class="fas fa-id-card"></i></label></span>
+                                <input type="text" name="phone" id="creat-company-phone" class="company-phone-input phone" placeholder="Телфон" autocorrect="off" autocapitalize="off" autocomplete="off" minlength="3">
+                            </div>
+                            <div class="input-block company-pay-block">
+                                <span class="icon"><label for="creat-company-pay"><i class="fas fa-coins"></i></label></span>
+                                <input type="date" min="2020-01-01" name="date" id="creat-company-pay" class="company-pay-input" placeholder="Сплачено до" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <input type="submit" class="primory-btn" value="Створити">
+                            <p class="error-message center"></p>
+                        </form>
+                    </div>
+                    <div class="companies-list-block">
+                        <span class="section_title bold">Список підприємств</span>
+                        <div class="table-wrapper">
+                            <table id='companies-table'>
+                            <tr class="table-row-header">
+                                <th class="table-header">id</th>
+                                <th class="table-header">Назва</th>
+                                <th class="table-header">Пошта</th>
+                                <th class="table-header">Сайт</th>
+                                <th class="table-header">Адреса</th>
+                                <th class="table-header">Телефон</th>
+                                <th class="table-header">Оплата</th>
+                                <th class="table-header"></th>
+                            </tr>
+                        </table>
+                        </div>
+                    </div>
+                </section>
+                <section class="section categories hide" id="section_categories">
+                    <div class="creat-category-block">
+                        <span class="section_title bold">Додати категорію</span>
+                        <form action="/" method="get"  class="creat-category-form">
+                            <div class="input-block category-name-block">
+                                <span class="icon"><label for="creat-category-name"><i class="fas fa-check"></i></label></span>
+                                <input type="text" name="category" id="creat-category-name" class="category-name-input" placeholder="Назва категорії" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="input-block subcategory-name-block">
+                                <span class="icon"><i class="fas fa-check-double"></i></span>
+                                <input type="text" name="subcategory" class="subcategory-name-input" placeholder="Назва підкатегорії" autocorrect="off" autocapitalize="off" autocomplete="off">
+                            </div>
+                            <div class="button-block add-subcategory-block">
+                                <span class="icon2"><i class="fas fa-plus-circle"></i></span>
+                            </div>
+                            <input type="submit" class="primory-btn" value="Створити">
+                            <p class="error-message center"></p>
+                        </form>
+                    </div>
+                    <div class="categories-list-block">
+                        <span class="section_title bold">Список категорій</span>
+                        <table id='categories-table'>
+                        </table>
+                    </div>
+                </section>
+                <section class="section notes hide" id="section_notes">
+                    <span class="section_title bold">Записи на перевірку</span>
+                    <div class="checking-post-wrapper">
+                        <ul class="checking-post-list">
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+    <div class="loader">
+        <img src="../../src/assets/images/Лого Космос.png" alt="Асоціація Космос" class="logo">
+        <div class="lds-hourglass"></div>
+    </div>
+</html>
