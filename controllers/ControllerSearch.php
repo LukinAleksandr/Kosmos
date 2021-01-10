@@ -17,7 +17,7 @@ class ControllerSearch
         if($userData)
         {
             //проверка на длинну ключевых слов
-            if(!preg_match ("/^(.){0,100}$/" , $userData['keyword'])){
+            if(!Validator::isKeyword($userData['keyword'])){
                 $isCorrectData = false;
                 $errorMsg .= "Максимальна довжина ключових слів 100 символів\r\n";
             }
@@ -56,7 +56,7 @@ class ControllerSearch
         if($userData)
         {
             //проверка на длинну ключевых слов
-            if(!preg_match ("/^(.){0,100}$/" , $userData['keyword'])){
+            if(!Validator::isKeyword($userData['keyword'])){
                 $isCorrectData = false;
                 $errorMsg .= "Максимальна довжина ключових слів 100 символів\r\n";
             }

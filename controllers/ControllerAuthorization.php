@@ -19,12 +19,12 @@ class ControllerAuthorization
         if($userData) //проверка наличия данных пользователя
         {
             //проверка формата почты пользователя
-            if(!preg_match ("/(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/" , $userData['email'])){
+            if(!Validator::isEmail($userData['email'])){
                 $isCorrectData = false;
                 $errorMsg .= "Невірний формат пошти\n";
             }
             //проверка формата пароля пользователя
-            if(!preg_match ("/((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15})/" , $userData['password'])){
+            if(!Validator::isPassword($userData['password'])){
                 $isCorrectData = false;
                 $errorMsg .= "Невірний формат паролю\r\n";
             }

@@ -10,10 +10,12 @@ define('SITE', ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERV
     include_once ROOT . "/components/Router.php";
     include_once ROOT . "/components/DB.php";
     include_once ROOT . "/components/StaticStatement.php";
+    include_once ROOT . "/components/Validator.php";
 
 
     $r = new Router();
     $db = new DB();
     $ss = new StaticStatement();
+    $validator = new Validator();
 
     $r->go();

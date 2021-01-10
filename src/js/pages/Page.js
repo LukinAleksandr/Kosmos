@@ -56,7 +56,6 @@ export default class Page {
       this.selectItemList
     )
   }
-  callback = () => {}
   //метод построения списка ролей
   buildRoleList(ev) {
     this.cleaningAllPageList()

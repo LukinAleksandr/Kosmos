@@ -95,17 +95,17 @@ class ControllerAdmin
         $isValid = true;
         $errorMsg = "";
         //проверка формата почты пользователя
-        if(!preg_match ("/(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/" , $data['email'])){
+        if(!Validator::isEmail($data['email'])){
             $isValid = false;
             $errorMsg .= "Невірний формат пошти користувача\n";
         }
         //проверка формата роли для пользователя
-        if(!preg_match ("/^(Адміністратор|Користувач)$/" , $data['role'])){
+        if(!Validator::isRole($data['role'])){
             $isValid = false;
             $errorMsg .= "Невірний формат ролі користувача\n";
         }
         //проверка формата статуса пользователя
-        if(!preg_match ("/^(1|2|3)$/" , $data['status'])){
+        if(!Validator::isStatus($data['status'])){
             $isValid = false;
             $errorMsg .= "Невірний формат статуса користувача\n";
         }
@@ -123,7 +123,7 @@ class ControllerAdmin
         $isValid = true;
         $errorMsg = "";
         //проверка формата почты пользователя
-        if(!preg_match ("/(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/" , $data['email'])){
+        if(!Validator::isEmail($data['email'])){
             $isValid = false;
             $errorMsg .= "Невірний формат пошти для нового підприємства\n";
         }
@@ -141,7 +141,7 @@ class ControllerAdmin
         $isValid = true;
         $errorMsg = "";
         //проверка формата почты пользователя
-        if(!preg_match ("/(.+){3,}/" , $data['categoryName']))
+        if(!Validator::isName($data['categoryName']))
         {
             $isValid = false;
             $errorMsg .= "Невірний формат категорії!\n";
@@ -150,7 +150,7 @@ class ControllerAdmin
 
         foreach($data['subcategories'] as $i)
         {
-            if(!preg_match ("/(.+){3,}/" , $i))
+            if(!Validator::isName($i))
             {
                 $isValid = false;
                 $errorMsg .= "Невірний формат підкатегорії\n";
@@ -166,15 +166,13 @@ class ControllerAdmin
         {
             return ['status' => false, 'response' => ['message' => $errorMsg]];
         }
-    }
-
-    
+    }  
     private function companyСhanger($data)
     {
         $isValid = true;
         $errorMsg = "";
         //проверка формата почты пользователя
-        if(!preg_match ("/(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/" , $data['email'])){
+        if(!Validator::isEmail($data['email'])){
             $isValid = false;
             $errorMsg .= "Невірний формат пошти підприємства\n";
         }
@@ -191,17 +189,17 @@ class ControllerAdmin
         $isValid = true;
         $errorMsg = "";
         //проверка формата почты пользователя
-        if(!preg_match ("/(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/" , $data['email'])){
+        if(!Validator::isEmail($data['email'])){
             $isValid = false;
             $errorMsg .= "Невірний формат пошти для нового користувача\n";
         }
         //проверка формата роли для пользователя
-        if(!preg_match ("/^(Адміністратор|Користувач)$/" , $data['role'])){
+        if(!Validator::isRole($data['role'])){
             $isValid = false;
             $errorMsg .= "Невірний формат ролі для нового користувача\n";
         }
         //проверка формата статуса пользователя
-        if(!preg_match ("/^(1|2|3)$/" , $data['status'])){
+        if(!Validator::isStatus($data['status'])){
             $isValid = false;
             $errorMsg .= "Невірний формат статуса для нового користувача\n";
         }
@@ -218,7 +216,7 @@ class ControllerAdmin
     {
         $isValid = true;
         $errorMsg = "";
-        if(!preg_match("/(.+){3,}/", $data['newName']))
+        if(!Validator::isName($data['newName']))
         {
             $isValid = false;
             $errorMsg = "Невірний формат категорії";
@@ -236,7 +234,7 @@ class ControllerAdmin
     {
         $isValid = true;
         $errorMsg = "";
-        if(!preg_match("/(.+){3,}/", $data['newName']))
+        if(!Validator::isName($data['newName']))
         {
             $isValid = false;
             $errorMsg = "Невірний формат підкатегорії";

@@ -26,7 +26,7 @@ class ControllerPassword
         if($userData)
         {
             //проверка на валидность почты
-            if(!preg_match ("/(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/" , $userData['email'])){
+            if(!Validator::isEmail($userData['email'])){
                 $isCorrectData = false;
                 $errorMsg = "Невірний формат пошти";
             }
@@ -94,11 +94,11 @@ class ControllerPassword
 
         if($userData)
         {
-            if(!preg_match ("/((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15})/" , $userData['old'])){
+            if(!Validator::isPassword($userData['old'])){
                 $isCorrectData = false;
                 $errorMsg = "Невірний формат чинного пароля";
             }
-            if(!preg_match ("/((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15})/" , $userData['new'])){
+            if(!Validator::isPassword($userData['new'])){
                 $isCorrectData = false;
                 $errorMsg = "Невірний формат нового пароля";
             }

@@ -97,7 +97,7 @@ class ModelAdmin
                 $modMail = new ModelSendMail();
                 $sending = $modMail->emailToNewUser($data['email'], $data['name'], $randomPass);
                 $allUsers = StaticStatement::getAllUsers();
-                return ['status' => false, 'response' => ['message' => $sending['response']['message'], 'users' => $allUsers]];
+                return ['status' => true, 'response' => ['message' => $sending['response']['message'], 'users' => $allUsers]];
             }else{
                 return ['status' => false, 'response' => ['message' => 'Виникла помилка, користувач не створений']];
             }
